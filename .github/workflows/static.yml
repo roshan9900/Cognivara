@@ -1,0 +1,60 @@
+# Workflow for deploying the static Cognivara Academy site to GitHub Pages.
+
+
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage public site only
+        run: |
+          mkdir -p site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.gitignore' \
+            --exclude 'Readme.md' \
+            --exclude 'site' \
+            ./ site/
+
+      - name: Inject SCRIPT_URL secret into the staged copy
+        env:
+          SCRIPT_URL: ${{ secrets.SCRIPT_URL }}
+        run: |
+          if [ -z "$SCRIPT_URL" ]; then
+            echo "::warning::SCRIPT_URL secret is not set - the contact form will show 'not connected yet' until you add it in repo Settings > Secrets and variables > Actions."
+          fi
+          sed -i "s|__SCRIPT_URL__|${SCRIPT_URL}|g" site/assets/js/main.js
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
