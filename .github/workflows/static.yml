@@ -1,6 +1,3 @@
-# Workflow for deploying the static Cognivara Academy site to GitHub Pages.
-
-
 name: Deploy static content to Pages
 
 on:
