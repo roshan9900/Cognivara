@@ -26,6 +26,9 @@ nav{display:flex;align-items:center;gap:26px;height:68px}
     display:none;
 }
 
+
+
+
 /* Light theme */
 :root[data-theme="light"] .logo-dark{
     display:none;
