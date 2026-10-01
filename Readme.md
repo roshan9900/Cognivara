@@ -1,1 +1,1 @@
-#Cognivara academy 
+# Equitient AI

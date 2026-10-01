@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cognivaraacademy.com/sitemap.xml
+Sitemap: https://equitientai.com/sitemap.xml

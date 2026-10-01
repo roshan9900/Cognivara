@@ -1,3 +1,23 @@
+# Workflow for deploying the static Equitient AI site to GitHub Pages.
+#
+# SETUP (one-time): add a repository secret named SCRIPT_URL containing your
+# Google Apps Script Web App URL (ends in /exec):
+#   Repo -> Settings -> Secrets and variables -> Actions -> New repository secret
+#   Name:  SCRIPT_URL
+#   Value: https://script.google.com/macros/s/XXXXXXXX/exec
+#
+# The secret is never committed to the repository. This workflow substitutes
+# it into assets/js/main.js only inside the built, deployed copy of the site -
+# the source file in the repo keeps the harmless '__SCRIPT_URL__' placeholder.
+#
+# NOTE: because this is a static front-end that calls the Apps Script endpoint
+# directly from the browser, the deployed page's JavaScript still has to
+# contain the URL for the contact form to work - viewing the live page's
+# source will still reveal it, the same as it would for any public form that
+# posts to a public endpoint. What this workflow fixes is keeping the URL out
+# of the git history and public repository source, and out of the '.env'-style
+# habit of pasting secrets straight into tracked files.
+
 name: Deploy static content to Pages
 
 on:
