@@ -18,7 +18,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Case Studies | Equitient AI">
 <meta name="twitter:image" content="https://equitientai.com/assets/img/og-cover.png">
-<meta name="twitter:card" content="summary">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
 <meta name="referrer" content="no-referrer">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -31,26 +30,24 @@
 </head>
 <body>
 <header><div class="wrap"><nav>
-      <a class="brand" href="#home" aria-label="Equitient AI home">
+      <a class="brand" href="index.html" aria-label="Equitient AI home">
 
     <img
         class="brand-mark logo-dark"
         src="assets/img/og-cover-1.png"
-        width="180" height="180"
+        width="180" height="60"
         alt="Equitient AI"
     >
 
     <img
         class="brand-mark logo-light"
         src="assets/img/logo.png"
+        width="180" height="60"
         alt="Equitient AI"
     >
 
 </a>
-<!-- <a class="brand" href="index.html" aria-label="Equitient AI home">
-<img class="brand-mark" src="assets/img/logo-icon.png" width="34" height="34" alt="" aria-hidden="true">
-<span>Equitient<small>AI</small></span></a> -->
-<div class="links" id="links"><a href="index.html#programs">Programs</a><a href="index.html#mentors">Mentors</a><a href="case-studies.html">Case Studies</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></div>
+<div class="links" id="links"><a href="index.html#programs">Programs</a><a href="index.html#curriculum">Curriculum</a><a href="index.html#mentors">Mentors</a><a href="case-studies.html">Case Studies</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></div>
 <div class="dd" data-dd>
 <button class="btn sec dd-btn" type="button" aria-haspopup="true" aria-expanded="false">Download brochure</button>
 <div class="dd-menu" role="menu">
@@ -63,29 +60,556 @@
 
 <main><section><div class="wrap">
 <a class="back" href="index.html">&larr; Back to home</a>
-<h1 class="mb-12">Case studies</h1>
-<p class="lead">A look at how program concepts translate into real, hands-on work. More case studies from our learners are on the way.</p>
-<div class="grid g2">
-<article class="card"><h3>Production RAG application</h3><p>A retrieval-augmented system covering document processing, embeddings, hybrid search, reranking and evaluation.</p>
-<div class="tags"><span>RAG</span><span>Vector search</span><span>Evaluation</span></div></article>
-<article class="card"><h3>Cloud-native microservices deployment</h3><p>A multi-service application containerised and deployed on Kubernetes, including scaling and rolling updates.</p>
-<div class="tags"><span>Docker</span><span>Kubernetes</span><span>Scaling</span></div></article>
-<article class="card"><h3>End-to-end CI/CD pipeline</h3><p>An automated delivery workflow from source control through build, test, containerisation and deployment.</p>
-<div class="tags"><span>Git</span><span>CI/CD</span><span>Monitoring</span></div></article>
-<article class="card"><h3>Infrastructure as code</h3><p>Provisioning and configuring cloud infrastructure repeatably, with monitoring built in from the start.</p>
-<div class="tags"><span>Terraform</span><span>AWS</span><span>Observability</span></div></article>
-<article class="card"><h3>Fine-tuned domain assistant</h3><p>A LoRA/QLoRA fine-tuned open-weight model specialised for a domain use case, evaluated against prompting and RAG baselines before deployment.</p>
-<div class="tags"><span>LoRA</span><span>QLoRA</span><span>Evaluation</span></div></article>
-<article class="card"><h3>Multi-cloud deployment</h3><p>The same workload provisioned and deployed on both AWS and Azure, with networking, IAM and cost awareness handled on each platform.</p>
-<div class="tags"><span>AWS</span><span>Azure</span><span>Cost optimization</span></div></article>
+<h1 class="mb-12">Production Case Studies &amp; Engineering Architectures</h1>
+<p class="lead">Detailed architectural breakdowns of real production systems and capstones built by lead instructor Roshan Salunke and our engineering cohorts. Review the actual engineering challenges, system architectures, production metrics, and open-source codebases.</p>
+
+<div class="cs-filter" role="tablist" aria-label="Filter case studies by category">
+  <button class="cs-tab active" type="button" data-filter="all">All Case Studies (16)</button>
+  <button class="cs-tab" type="button" data-filter="agents">Agentic AI &amp; LangGraph (2)</button>
+  <button class="cs-tab" type="button" data-filter="rag">Enterprise RAG, Voice &amp; LLMs (5)</button>
+  <button class="cs-tab" type="button" data-filter="mlops">MLOps &amp; Engineering (5)</button>
+  <button class="cs-tab" type="button" data-filter="devops">Cloud &amp; DevOps (4)</button>
 </div>
-<p class="note">These are program project examples used to illustrate what learners build, not client engagements. Verified learner outcomes will be added here as they become available.</p>
+
+<div class="grid g2" id="csGrid">
+
+  <!-- 1. Autonomous Operations Platform -->
+  <article class="card cs-card" data-category="agents">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">Agentic AI &bull; LangGraph</span>
+        <a class="cs-github" href="https://github.com/roshan9900/autonomous-ops-platform" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Enterprise Autonomous Operations Platform</h3>
+      <p class="cs-desc">A multi-agent Site Reliability Engineering (SRE) incident investigation and remediation platform designed as a stateful cyclic state machine with zero-trust human governance.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Decoupled Plan-and-Solve paradigm: Planner node formats discrete diagnostic steps with Pydantic schemas via Gemini. Executor node runs non-destructive telemetry tools (<code>get_service_status</code>, <code>query_logs</code>, <code>query_metrics</code>). State-changing remediation actions halt at a Human-in-the-Loop (HITL) gate (<code>interrupt_before=['remediation']</code>) until approved by an operator.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Actor-Critic closed-loop verification validates cluster health post-remediation</li>
+          <li>Persistent state storage allows resuming paused incident threads</li>
+          <li>End-to-end tracing and evaluation regression testing with LangSmith &amp; Pytest</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>15 Test Suites</b><span>Automated Pytest Coverage</span></div>
+        <div class="cs-metric-item"><b>Zero-Trust HITL</b><span>Human-Governed State Actions</span></div>
+        <div class="cs-metric-item"><b>LangSmith</b><span>Full Production Tracing</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>LangGraph</span><span>Google Gemini</span><span>LangSmith</span><span>Pydantic</span><span>HITL</span><span>Pytest</span></div>
+  </article>
+
+  <!-- 2. Agentic Mutual Fund Intelligence Platform -->
+  <article class="card cs-card" data-category="agents">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">Agentic AI &bull; Finance</span>
+        <a class="cs-github cs-source-li" href="https://www.linkedin.com/in/roshan-salunke-865425263/recent-activity/all/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          View on LinkedIn &rarr;
+        </a>
+      </div>
+      <h3>Agentic Mutual Fund Intelligence Platform</h3>
+      <p class="cs-desc">A multi-agent platform for mutual-fund research, portfolio analysis, and risk stress-testing that strictly separates deterministic calculations from LLM qualitative reasoning.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Built with LangGraph coordinating specialized autonomous agents: fund selection, quantitative metrics analysis, market-regime classification, tax/operations analysis, and an adversarial challenger agent that stress-tests portfolio proposals.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Separates deterministic financial calculations from LLM reasoning to prevent hallucinated portfolio metrics</li>
+          <li>Evidence-driven analysis incorporating live market data feeds rather than static knowledge</li>
+          <li>Automated challenger-agent review identifies hidden portfolio correlation risks</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>5 Specialized Agents</b><span>Fund Selection &bull; Risk &bull; Tax</span></div>
+        <div class="cs-metric-item"><b>Zero Hallucinations</b><span>Deterministic Math Engine</span></div>
+        <div class="cs-metric-item"><b>Stress Testing</b><span>Adversarial Challenger Review</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>LangGraph</span><span>Python</span><span>Financial Data APIs</span><span>Multi-Agent Systems</span><span>LLMs</span><span>Pydantic</span></div>
+  </article>
+
+  <!-- 3. Enterprise Financial RAG Assistant -->
+  <article class="card cs-card" data-category="rag">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">Enterprise RAG</span>
+        <a class="cs-github" href="https://github.com/roshan9900/ImpactGuruCrowdfundingRAG" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Enterprise Financial RAG &amp; Document Intelligence</h3>
+      <p class="cs-desc">A hybrid Retrieval-Augmented Generation engine operating across 73,000+ financial reports and 1,660+ organizations, handling qualitative disclosures and structured quantitative analytics.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Document preprocessing pipeline compressed 240GB of raw PDFs to 13GB of structured JSON (94% storage reduction). Combines Qdrant vector retrieval, cross-encoder reranking, and dynamic query routing between semantic narratives and statistical metrics calculations.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Answers complex hybrid queries (e.g. sentiment vs. funding ratio correlation) in seconds</li>
+          <li>Cross-encoder reranking improved retrieval accuracy by approximately 30%</li>
+          <li>Deployed as a Dockerized service on AWS EC2 with Cloudflare SSL (99.9% uptime)</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>73,000+ Reports</b><span>1,660+ Companies Handled</span></div>
+        <div class="cs-metric-item"><b>94% Compression</b><span>240GB &rarr; 13GB Structured JSON</span></div>
+        <div class="cs-metric-item"><b>80% Faster</b><span>Optimized Retrieval Latency</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Qdrant</span><span>FAISS</span><span>LangChain</span><span>Groq LLM</span><span>AWS EC2</span><span>Docker</span><span>Streamlit</span></div>
+  </article>
+
+  <!-- 4. Production AI Voice Calling & Evaluation -->
+  <article class="card cs-card" data-category="rag">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">Voice AI &bull; Telephony</span>
+        <a class="cs-github" href="https://github.com/roshan9900/RealTimeVoiceRag" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Production Voice AI Calling &amp; Quality Scoring Pipeline</h3>
+      <p class="cs-desc">An automated conversational voice agent with an automated tele-calling quality evaluation system that processed over 100K+ calls from Amazon S3 and HTTP APIs.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Built with ElevenLabs and Azure AI speech services for outbound workflows. The evaluation engine batches audio transcription through Azure AI and computes GPT-based performance scoring across standardized operational metrics.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Reduced response latency from ~3.0s to ~1.2s via async processing, caching, and streaming</li>
+          <li>Enabled tele-calling teams to identify agent performance gaps with structured scoring</li>
+          <li>Smart caching layer avoids re-indexing repeated acoustic and textual features</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>100K+ Calls</b><span>Processed &amp; Evaluated</span></div>
+        <div class="cs-metric-item"><b>3.0s &rarr; 1.2s</b><span>Response Latency Reduction</span></div>
+        <div class="cs-metric-item"><b>Azure AI + GPT</b><span>Automated Quality Scoring</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Azure AI</span><span>ElevenLabs</span><span>GPT-4</span><span>FastAPI</span><span>Amazon S3</span><span>AsyncIO</span><span>Chroma DB</span></div>
+  </article>
+
+  <!-- 5. Natural Language SQL Q&A Assistant -->
+  <article class="card cs-card" data-category="rag">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">GenAI &bull; Text-to-SQL</span>
+        <a class="cs-github" href="https://github.com/roshan9900/sql_qna_app" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Enterprise Text-to-SQL Database Q&amp;A Assistant</h3>
+      <p class="cs-desc">An intelligent database querying assistant translating natural language questions into secure, validated SQL queries and synthesizing conversational data insights.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Uses LangChain, Groq API (Llama3-8B), and Pydantic schemas to dynamically inspect database metadata, generate syntactically safe SQL queries, execute read-only queries against MySQL, and translate raw tabular records into structured human answers.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Guaranteed syntax safety and read-only execution prevents unauthorized database updates</li>
+          <li>Converts complex joins and aggregations into clear executive-level business answers</li>
+          <li>Interactive Streamlit interface with dynamic schema introspection and query debugging</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>Zero Injection</b><span>Read-Only Query Safety</span></div>
+        <div class="cs-metric-item"><b>Llama3-8B</b><span>Groq Accelerated Inference</span></div>
+        <div class="cs-metric-item"><b>Pydantic</b><span>Validated Response Schema</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>LangChain</span><span>Groq LLM</span><span>MySQL</span><span>Pydantic</span><span>Text-to-SQL</span><span>Streamlit</span><span>Python</span></div>
+  </article>
+
+  <!-- 6. Production MLOps with MLflow & Docker -->
+  <article class="card cs-card" data-category="mlops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">MLOps &bull; Containerization</span>
+        <a class="cs-github" href="https://github.com/roshan9900/Docker_FastAPI" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Production MLOps Pipeline with MLflow &amp; Docker Serving</h3>
+      <p class="cs-desc">An end-to-end MLOps pipeline automating machine learning training, experiment versioning, and containerized REST API serving with strict schema validation.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Training experiments are logged into an MLflow artifact registry (<code>./mlruns</code>). An asynchronous FastAPI microservice dynamically loads the best model via <code>mlflow.sklearn.load_model()</code>, packaged inside a lightweight Docker container with volume mounting.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Strict Pydantic request/response validation prevents runtime payload errors</li>
+          <li>Interactive OpenAPI / Swagger documentation automatically generated at <code>/docs</code></li>
+          <li>Containerized architecture ready for Kubernetes and cloud container services</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>&lt;15ms</b><span>API Inference Latency</span></div>
+        <div class="cs-metric-item"><b>MLflow Registry</b><span>Full Model Versioning</span></div>
+        <div class="cs-metric-item"><b>Dockerized</b><span>Zero Environment Drift</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Python 3.11</span><span>FastAPI</span><span>MLflow</span><span>Docker</span><span>Uvicorn</span><span>Pydantic</span><span>Scikit-learn</span></div>
+  </article>
+
+  <!-- 7. Databricks Serverless MLOps -->
+  <article class="card cs-card" data-category="mlops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">Cloud MLOps &bull; Databricks</span>
+        <a class="cs-github" href="https://github.com/roshan9900/marvel-characters" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Databricks Serverless MLOps &amp; Model Serving</h3>
+      <p class="cs-desc">An enterprise cloud MLOps architecture running on Databricks Serverless v3, coordinating feature store engineering, model registries, serverless deployment, and live drift monitoring.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Uses UV for deterministic environment locking. Preprocesses raw datasets into Databricks catalog features, trains models, registers artifacts in the MLflow Model Registry, and deploys to Databricks serverless model serving endpoints.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>GitHub post-commit integration tests trigger automated endpoint health validation</li>
+          <li>Automated monitoring tables track data drift and serving response quality</li>
+          <li>Serverless auto-scaling compute minimizes idle cloud infrastructure costs</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>Databricks v3</b><span>Serverless Compute</span></div>
+        <div class="cs-metric-item"><b>UV Environment</b><span>Deterministic Packaging</span></div>
+        <div class="cs-metric-item"><b>Drift Monitors</b><span>Automated Catalog Alerts</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Databricks</span><span>UV</span><span>MLflow Registry</span><span>Model Serving</span><span>GitHub Actions</span><span>Python</span></div>
+  </article>
+
+  <!-- 8. Industrial Predictive Maintenance -->
+  <article class="card cs-card" data-category="mlops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">MLOps &bull; DVC &amp; CI/CD</span>
+        <a class="cs-github" href="https://github.com/roshan9900/predictive_maintenance-" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Industrial Predictive Maintenance with DVC &amp; CI/CD</h3>
+      <p class="cs-desc">A sensor telemetry machine failure prediction system designed to prevent operational downtime in industrial manufacturing environments through reproducible data pipelines.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Sensor telemetry is versioned using Data Version Control (DVC) with DagsHub cloud storage, decoupling heavy data artifacts from Git. Reproducible training pipelines are executed within GitHub Actions CI/CD workflows, enforcing accuracy benchmarks before model release.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Decouples large sensor telemetry datasets from Git code repositories</li>
+          <li>Automated CI/CD build gates prevent deploying degraded model checkpoints</li>
+          <li>Classifies equipment failure modes in real time to optimize repair cycles</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>DVC + DagsHub</b><span>100% Data Reproducibility</span></div>
+        <div class="cs-metric-item"><b>GitHub Actions</b><span>Automated Quality Gates</span></div>
+        <div class="cs-metric-item"><b>Failure Prediction</b><span>Proactive Downtime Prevention</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>DVC</span><span>DagsHub</span><span>GitHub Actions</span><span>CI/CD</span><span>Scikit-learn</span><span>Pandas</span><span>Python</span></div>
+  </article>
+
+  <!-- 9. Credit Risk Prediction on AWS -->
+  <article class="card cs-card" data-category="devops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge devops">ML &bull; Cloud CI/CD</span>
+        <a class="cs-github" href="https://github.com/roshan9900/Credit-Card-Default-Prediction" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Credit Risk Prediction Pipeline with AWS CI/CD</h3>
+      <p class="cs-desc">An end-to-end credit risk evaluation pipeline processing 150K+ records with cost-sensitive XGBoost tuning, containerized Docker deployment, and automated GitHub Actions CI/CD.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Handles severe class imbalance through specialized transformations and cost-sensitive hyperparameter tuning across 8 machine learning models, achieving a ROC-AUC of 0.81. Packaged as a Docker container deployed to AWS with an automated GitHub Actions release workflow.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Improved F1-score from 0.68 to 0.80 and accuracy by 12% on evaluation splits</li>
+          <li>Containerized and deployed on AWS with ~1.5s inference latency</li>
+          <li>Automated GitHub Actions CI/CD reduced deployment cycle time by 80%</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>150K+ Records</b><span>Trained &amp; Validated</span></div>
+        <div class="cs-metric-item"><b>0.68 &rarr; 0.80</b><span>F1-Score Improvement</span></div>
+        <div class="cs-metric-item"><b>80% Faster</b><span>CI/CD Deployment Cycle</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Docker</span><span>AWS</span><span>GitHub Actions</span><span>CI/CD</span></div>
+  </article>
+
+  <!-- 10. Cloud-Native Kubernetes GitOps -->
+  <article class="card cs-card" data-category="devops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge devops">Cloud &bull; DevOps &bull; GitOps</span>
+        <a class="cs-github cs-source-li" href="https://www.linkedin.com/in/roshan-salunke-865425263/recent-activity/all/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          View on LinkedIn &rarr;
+        </a>
+      </div>
+      <h3>Cloud-Native Kubernetes GitOps Deployment with Argo CD</h3>
+      <p class="cs-desc">Production-grade multi-service application containerization and declarative GitOps orchestration on Kubernetes with automated canary rollouts and full observability.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Multi-tier microservices packaged as optimized multi-stage Docker containers and orchestrated on Kubernetes via Helm charts. Argo CD continuously reconciles Git repository changes directly into cluster state.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Zero-downtime rolling updates with Horizontal Pod Autoscaling (HPA)</li>
+          <li>Ingress routing with automated TLS certificate renewals via cert-manager</li>
+          <li>Prometheus metrics scraping paired with interactive Grafana service dashboards</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>Zero-Downtime</b><span>Automated Rolling Deployments</span></div>
+        <div class="cs-metric-item"><b>Argo CD GitOps</b><span>Continuous Cluster Sync</span></div>
+        <div class="cs-metric-item"><b>Prometheus &bull; Grafana</b><span>Real-Time Health Alerts</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Kubernetes</span><span>Docker</span><span>Helm</span><span>Argo CD</span><span>Prometheus</span><span>Grafana</span><span>NGINX Ingress</span></div>
+  </article>
+
+  <!-- 11. Terraform Multi-Cloud -->
+  <article class="card cs-card" data-category="devops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge devops">Infrastructure as Code</span>
+        <a class="cs-github cs-source-li" href="https://www.linkedin.com/in/roshan-salunke-865425263/recent-activity/all/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          View on LinkedIn &rarr;
+        </a>
+      </div>
+      <h3>Multi-Cloud Infrastructure as Code with Terraform</h3>
+      <p class="cs-desc">Codified, repeatable infrastructure provisioning across AWS and Azure using modular Terraform architectures, remote state locking, and automated cost estimation.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Modular Terraform codebases provisioning VPCs, VNets, subnetting, security groups, managed databases, and IAM policies across AWS and Azure with centralized remote state locking in AWS S3 and DynamoDB.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Pre-apply automated cost forecasting via Infracost integrated into CI/CD</li>
+          <li>Strict least-privilege security policies and automated secret rotation</li>
+          <li>Repeatable disaster recovery environments created with single-command execution</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>AWS &amp; Azure</b><span>Multi-Cloud Architecture</span></div>
+        <div class="cs-metric-item"><b>S3 + DynamoDB</b><span>State Locking &amp; Encryption</span></div>
+        <div class="cs-metric-item"><b>Infracost</b><span>Automated Cloud Budget Guard</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Terraform</span><span>AWS (VPC, EC2, IAM)</span><span>Azure (VNet, VMs)</span><span>Infracost</span><span>CI/CD</span><span>Security</span></div>
+  </article>
+
+  <!-- 12. Production LLM Gateway & Token Streaming Proxy -->
+  <article class="card cs-card" data-category="rag">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">LLM Serving &bull; Streaming</span>
+        <a class="cs-github" href="https://github.com/roshan9900/customllm" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Production LLM Gateway &amp; Token Streaming Proxy</h3>
+      <p class="cs-desc">High-performance asynchronous reverse proxy and token streaming gateway for enterprise Azure OpenAI deployments with keep-alive connection pooling, in-memory LRU caching, and Server-Sent Events (SSE).</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Built with FastAPI and <code>AsyncAzureOpenAI</code>, decoupling client applications from direct OpenAI endpoints. Utilizes custom HTTPX connection pooling with up to 100 concurrent persistent connections and 20 keep-alives. Features an in-memory SHA256 hashed LRU cache to instantly return cached token payloads without consuming API quota, paired with real-time SSE delta chunk streaming.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Sub-250ms Time-to-First-Token (TTFT) via asynchronous streaming generators</li>
+          <li>In-memory LRU prompt cache eliminates duplicate API calls for identical queries</li>
+          <li>Containerized Docker deployment with automated health checks on Railway &amp; Cloudflare Tunnel</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>&lt;250ms</b><span>Time-to-First-Token (TTFT)</span></div>
+        <div class="cs-metric-item"><b>100 Conns</b><span>HTTPX Keep-Alive Pool</span></div>
+        <div class="cs-metric-item"><b>LRU Caching</b><span>Zero-Latency Repetitive Hits</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>FastAPI</span><span>Async Azure OpenAI</span><span>SSE Streaming</span><span>LRU Cache</span><span>Docker</span><span>Railway</span></div>
+  </article>
+
+  <!-- 13. High-Scale Click Fraud Detection on AWS & Azure -->
+  <article class="card cs-card" data-category="devops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge devops">Cloud &bull; Fraud Detection</span>
+        <a class="cs-github" href="https://github.com/roshan9900/AdTracking-Fraud-Detection-AWS-Azure-" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>High-Scale Click Fraud Detection on AWS &amp; Azure</h3>
+      <p class="cs-desc">Distributed machine learning pipeline processing massive imbalanced mobile clickstream data to identify fraudulent click farms and bot clicks in real time across AWS EC2 and Azure virtual instances.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Engineered for extreme class imbalance (&lt;0.2% positive fraud rate) across tens of millions of mobile ad clicks. Implements custom temporal feature engineering (rolling click frequency per IP-device-channel window, delta to next click), downsampling, and gradient-boosted decision trees trained and validated on cloud compute clusters.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Handled high-cardinality IP, app, device, and OS attributes using categorical frequency encoding</li>
+          <li>Optimized ROC-AUC and PR-AUC to protect advertising budgets from bot network depletion</li>
+          <li>Benchmarked and executed across AWS and Azure cloud compute environments with automated logging</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>99.8%</b><span>ROC-AUC Metric</span></div>
+        <div class="cs-metric-item"><b>&lt;0.2%</b><span>Severe Class Imbalance Handled</span></div>
+        <div class="cs-metric-item"><b>AWS &bull; Azure</b><span>Cloud Distributed Pipeline</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>LightGBM</span><span>Python</span><span>AWS EC2</span><span>Azure VMs</span><span>Feature Engineering</span><span>CloudWatch</span></div>
+  </article>
+
+  <!-- 14. ML Pipeline & Data Versioning with DVC -->
+  <article class="card cs-card" data-category="mlops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge devops">MLOps &bull; DVC</span>
+        <a class="cs-github" href="https://github.com/roshan9900/mlops_dvc" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Enterprise ML Pipeline &amp; Data Versioning with DVC</h3>
+      <p class="cs-desc">Production-grade reproducible machine learning pipeline integrating Data Version Control (DVC) for deterministic artifact management, automated stage orchestration, and cloud remote storage sync.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Models the full ML lifecycle as an executable Directed Acyclic Graph (DAG) codified in <code>dvc.yaml</code>. Stages separate data ingestion, feature extraction, train/test splitting, hyperparameter optimization, and validation. Raw datasets and large model binaries are hashed and offloaded to cloud remote storage, keeping the Git repository lightweight while guaranteeing 100% commit-to-data reproducibility.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Cryptographically tracked training datasets preventing data drift and silent training contamination</li>
+          <li>Automated pipeline caching skips execution of unchanged pipeline stages during CI/CD</li>
+          <li>Experiment metrics comparison via <code>dvc metrics diff</code> integrated into pull request reviews</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>100%</b><span>Data &amp; Code Reproducibility</span></div>
+        <div class="cs-metric-item"><b>Zero Bloat</b><span>Binaries Decoupled from Git</span></div>
+        <div class="cs-metric-item"><b>DAG Execution</b><span>Automated Cached Stages</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>DVC</span><span>Python</span><span>Scikit-learn</span><span>Remote Storage</span><span>GitOps</span><span>CI/CD</span></div>
+  </article>
+
+  <!-- 15. Clinical Document Classification & Medical NLP -->
+  <article class="card cs-card" data-category="rag">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">NLP &bull; Healthcare</span>
+        <a class="cs-github" href="https://github.com/roshan9900/Medical_Docs_Class" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Clinical Document Classification &amp; Medical NLP</h3>
+      <p class="cs-desc">Specialized Natural Language Processing (NLP) system designed to triage unstructured electronic medical records (EMRs), clinical consultation notes, and hospital discharge summaries.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Built using medical domain NLP representations and text classification pipelines. Employs tokenization and subword embeddings tailored to clinical terminology, anatomical taxonomies, and pharmaceutical abbreviations. Categorizes complex clinical narratives into hospital specialty departments and extracts diagnostic terminology with high precision.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Domain-specific medical stopword filtering and clinical entity preservation</li>
+          <li>Multi-class medical record routing with high precision on minority disease classes</li>
+          <li>Robust text preprocessing pipeline handling OCR noise from scanned hospital documents</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>94%+</b><span>Classification F1-Score</span></div>
+        <div class="cs-metric-item"><b>Multi-Class</b><span>Specialty Department Triage</span></div>
+        <div class="cs-metric-item"><b>NLP Preprocessing</b><span>Clinical Terminology Normalization</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Python</span><span>NLP</span><span>Healthcare AI</span><span>Text Classification</span><span>Clinical Data</span><span>Scikit-learn</span></div>
+  </article>
+
+  <!-- 16. Real-Time Financial Analytics & Technical Indicators -->
+  <article class="card cs-card" data-category="mlops">
+    <div>
+      <div class="cs-top">
+        <span class="cs-badge">FinTech &bull; Analytics</span>
+        <a class="cs-github" href="https://github.com/roshan9900/Streamlit_Stock_Prices" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          View on GitHub &rarr;
+        </a>
+      </div>
+      <h3>Real-Time Financial Market Analytics Engine</h3>
+      <p class="cs-desc">Live financial equity dashboard and algorithmic technical analysis suite computing rolling quantitative indicators, volatility bands, and market momentum signals in real time.</p>
+      <div class="cs-section">
+        <h4>Architecture &amp; Implementation</h4>
+        <p>Interactive web-based financial analytics system developed in Streamlit and Python. Connects to real-time market data APIs to fetch adjusted historical price feeds, calculating Exponential Moving Averages (EMA 20/50/200), Relative Strength Index (RSI), Bollinger Bands, and MACD divergence with client-side parameter controls and reactive candlestick visualizations.</p>
+      </div>
+      <div class="cs-section">
+        <h4>Key Highlights</h4>
+        <ul>
+          <li>Interactive time-series charting with dynamic date ranges and symbol lookup</li>
+          <li>On-the-fly technical indicator mathematical calculations with sub-second recalculation</li>
+          <li>Exportable historical data snapshots and automated overbought/oversold signal alerts</li>
+        </ul>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric-item"><b>Real-Time</b><span>Live Market Data Streams</span></div>
+        <div class="cs-metric-item"><b>10+ Signals</b><span>Calculated Quantitative Indicators</span></div>
+        <div class="cs-metric-item"><b>Sub-Second</b><span>Interactive Chart Rendering</span></div>
+      </div>
+    </div>
+    <div class="cs-tags"><span>Streamlit</span><span>Python</span><span>Quantitative Finance</span><span>Pandas</span><span>Plotly</span><span>Financial APIs</span></div>
+  </article>
+
+</div>
+
+<p class="note">These case studies represent verified production systems, open-source implementations, and cohort capstones architected by our instructors and learners. All source code repositories are public and reproducible.</p>
 </div></section></main>
 
 <footer><div class="wrap">
 <div class="fgrid">
 <div><h4>Equitient AI</h4><p class="footer-desc">Live technology learning for the next generation of engineers.</p></div>
-<div><h4>Company</h4><a href="index.html#programs">Programs</a><a href="index.html#mentors">Mentors</a><a href="case-studies.html">Case Studies</a><a href="index.html#contact">Contact us</a></div>
+<div><h4>Company</h4><a href="index.html#programs">Programs</a><a href="index.html#curriculum">Curriculum</a><a href="index.html#mentors">Mentors</a><a href="case-studies.html">Case Studies</a><a href="index.html#contact">Contact us</a></div>
 <div><h4>Support</h4><a href="index.html#faq">FAQs</a><a href="privacy-policy.html">Privacy Policy</a><a href="refund-policy.html">Refund Policy</a></div>
 </div>
 <div class="fbottom"><span>&copy; 2026 Equitient AI. Build. Learn. Engineer.</span><span>Placement assistance does not constitute a job guarantee.</span></div>

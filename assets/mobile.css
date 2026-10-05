@@ -42,4 +42,60 @@
  .fgrid a{display:block;padding:7px 0}
  .fbottom{display:flex!important;flex-direction:column;align-items:flex-start;gap:6px;padding-bottom:12px}
  .wa{right:14px!important;bottom:14px!important;padding:11px 16px!important;font-size:14px!important}
+
+ /* hero */
+ .hero{min-height:0!important;padding:22px 0 34px!important}
+ .hero .wrap{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:22px!important;min-height:0!important}
+ .hero h1{font-size:clamp(32px,9.2vw,44px);line-height:1.12;margin:0 0 14px}
+ .hero p{font-size:16px;line-height:1.65}
+ .hero .art{display:block;width:100%;max-width:340px;height:auto;margin:4px auto 0}
+ .cta{display:grid!important;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:20px}
+ .cta .btn,.cta .dd,.cta .dd-btn{width:100%;box-sizing:border-box;justify-content:center;text-align:center}
+ .marks{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+ .marks span{display:block;padding:12px 14px;border-radius:14px;background:rgba(120,150,255,.08);border:1px solid rgba(120,150,255,.18);font-size:13px;line-height:1.35}
+ .marks span b{display:block;font-size:15px;margin-bottom:2px}
+
+ /* sections */
+ main section{padding-top:42px;padding-bottom:42px}
+ main section.hero{padding-top:22px!important;padding-bottom:34px!important}
+ .steps{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+ .steps h3{font-size:15px;margin:0 0 6px}.steps p{font-size:13.5px;line-height:1.5;margin:0}
+ .card{padding:18px;border-radius:18px;box-sizing:border-box}
+ .tags{display:flex;flex-wrap:wrap;gap:8px}
+ .prog .row2{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:10px}
+ .prog .row2 .btn{width:100%;box-sizing:border-box;text-align:center;justify-content:center}
+ .who{display:flex;align-items:center;gap:14px}
+
+ /* contact form */
+ .contact{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:26px!important}
+ form .row{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+ form input,form select,form textarea{width:100%;box-sizing:border-box;font-size:16px;min-height:50px;border-radius:12px}
+ form textarea{min-height:110px}
+ form .btn{width:100%}
+
+ /* bottom quick action bar */
+ .eq-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:9000;gap:8px;padding:8px;border-radius:20px;background:rgba(8,14,40,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(120,150,255,.28);box-shadow:0 14px 36px rgba(0,0,0,.45);transition:transform .3s ease,opacity .3s ease}
+ .eq-bar.eq-hide{transform:translateY(150%);opacity:0;pointer-events:none}
+ .eq-bar a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:0 4px;white-space:nowrap;border-radius:14px;font-weight:600;font-size:14px;text-decoration:none;color:#fff;transition:transform .15s ease}
+ .eq-bar svg{width:17px;height:17px;flex:none;fill:currentColor}
+ .eq-b-call{background:rgba(255,255,255,.1)}
+ .eq-b-wa{background:#22c55e;color:#04210f!important}
+ .eq-b-enq{background:linear-gradient(90deg,#12b8f0,#5b4bff 60%,#a64dff)}
+
+ /* popup mobile bottom-sheet */
+ .eq-overlay{align-items:flex-end!important;padding:0!important}
+ .eq-modal{width:100%!important;max-height:94vh!important;border-radius:24px 24px 0 0!important;animation:eqUp .35s ease!important}
+ .eq-left{padding:18px 18px 6px!important}
+ .eq-left h2{font-size:18px!important;margin:0!important}
+ .eq-logo{width:140px!important;margin-bottom:10px!important}
+ .eq-sub,.eq-course,.eq-chips{display:none!important}
+ .eq-right{padding:12px 18px calc(22px + env(safe-area-inset-bottom,0px))!important}
+ .eq-f input,.eq-f select{height:50px!important;font-size:16px!important}
+ .eq-close{top:10px!important;right:10px!important}
 }
+
+.eq-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:10001;background:linear-gradient(90deg,#17d4ff,#9b5cff);pointer-events:none}
+.eq-bar{display:none}
+@keyframes eqUp{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media (max-width:360px){.steps{grid-template-columns:minmax(0,1fr)!important}.marks{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.eq-js .eq-reveal{opacity:1;transform:none;transition:none}.eq-bar,.eq-modal{transition:none;animation:none!important}}
