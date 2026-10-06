@@ -18,7 +18,6 @@ if(links&&menu){
 
 /* ---- Brochure data (every page) ---- */
 var BROCHURES={
-  devops:{file:'assets/Cognivara-DevOps-Brochure.pdf', label:'DevOps Engineer', program:'DevOps Engineer'},
   genai:{file:'assets/Equitient-AI-Advanced-GenAI-Brochure.pdf', label:'Advanced GenAI Engineer', program:'Advanced GenAI Engineer'}
 };
 function downloadBrochure(key){

@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Case Studies | Equitient AI</title>
-<meta name="description" content="Real program project examples from Equitient AI's GenAI and DevOps cohorts: RAG systems, Kubernetes deployments, CI/CD pipelines and infrastructure as code.">
-<meta name="keywords" content="GenAI project examples, DevOps project examples, RAG case study, Kubernetes case study, CI/CD pipeline example, Equitient AI">
+<meta name="description" content="Real production system architectures and cohort capstones from Equitient AI's Advanced GenAI Engineer program: RAG systems, AI agents, fine-tuning and production deployments.">
+<meta name="keywords" content="GenAI project examples, RAG case study, LangGraph case study, AI agents example, QLoRA fine-tuning, production GenAI, Equitient AI">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://equitientai.com/case-studies.html">
 <meta name="theme-color" content="#050b1a">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Equitient AI">
 <meta property="og:title" content="Case Studies | Equitient AI">
-<meta property="og:description" content="Real program project examples from Equitient AI's GenAI and DevOps cohorts.">
+<meta property="og:description" content="Real production architectures and capstones from Equitient AI's Advanced GenAI Engineer program.">
 <meta property="og:url" content="https://equitientai.com/case-studies.html">
 <meta property="og:image" content="https://equitientai.com/assets/img/og-cover.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,9 +49,8 @@
 </a>
 <div class="links" id="links"><a href="index.html#programs">Programs</a><a href="index.html#curriculum">Curriculum</a><a href="index.html#mentors">Mentors</a><a href="case-studies.html">Case Studies</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Contact</a></div>
 <div class="dd" data-dd>
-<button class="btn sec dd-btn" type="button" aria-haspopup="true" aria-expanded="false">Download brochure</button>
+<button class="btn sec dd-btn" type="button" aria-haspopup="true" aria-expanded="false">Download brochure &#9662;</button>
 <div class="dd-menu" role="menu">
-<button type="button" role="menuitem" data-brochure="devops">DevOps Engineer brochure</button>
 <button type="button" role="menuitem" data-brochure="genai">Advanced GenAI Engineer brochure</button>
 </div></div>
 <button class="icon" id="theme" aria-label="Switch between dark and light theme">&#9681;</button>
@@ -64,11 +63,10 @@
 <p class="lead">Detailed architectural breakdowns of real production systems and capstones built by lead instructor Roshan Salunke and our engineering cohorts. Review the actual engineering challenges, system architectures, production metrics, and open-source codebases.</p>
 
 <div class="cs-filter" role="tablist" aria-label="Filter case studies by category">
-  <button class="cs-tab active" type="button" data-filter="all">All Case Studies (16)</button>
+  <button class="cs-tab active" type="button" data-filter="all">All Case Studies (12)</button>
   <button class="cs-tab" type="button" data-filter="agents">Agentic AI &amp; LangGraph (2)</button>
   <button class="cs-tab" type="button" data-filter="rag">Enterprise RAG, Voice &amp; LLMs (5)</button>
   <button class="cs-tab" type="button" data-filter="mlops">MLOps &amp; Engineering (5)</button>
-  <button class="cs-tab" type="button" data-filter="devops">Cloud &amp; DevOps (4)</button>
 </div>
 
 <div class="grid g2" id="csGrid">
@@ -337,104 +335,7 @@
     <div class="cs-tags"><span>DVC</span><span>DagsHub</span><span>GitHub Actions</span><span>CI/CD</span><span>Scikit-learn</span><span>Pandas</span><span>Python</span></div>
   </article>
 
-  <!-- 9. Credit Risk Prediction on AWS -->
-  <article class="card cs-card" data-category="devops">
-    <div>
-      <div class="cs-top">
-        <span class="cs-badge devops">ML &bull; Cloud CI/CD</span>
-        <a class="cs-github" href="https://github.com/roshan9900/Credit-Card-Default-Prediction" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-          View on GitHub &rarr;
-        </a>
-      </div>
-      <h3>Credit Risk Prediction Pipeline with AWS CI/CD</h3>
-      <p class="cs-desc">An end-to-end credit risk evaluation pipeline processing 150K+ records with cost-sensitive XGBoost tuning, containerized Docker deployment, and automated GitHub Actions CI/CD.</p>
-      <div class="cs-section">
-        <h4>Architecture &amp; Implementation</h4>
-        <p>Handles severe class imbalance through specialized transformations and cost-sensitive hyperparameter tuning across 8 machine learning models, achieving a ROC-AUC of 0.81. Packaged as a Docker container deployed to AWS with an automated GitHub Actions release workflow.</p>
-      </div>
-      <div class="cs-section">
-        <h4>Key Highlights</h4>
-        <ul>
-          <li>Improved F1-score from 0.68 to 0.80 and accuracy by 12% on evaluation splits</li>
-          <li>Containerized and deployed on AWS with ~1.5s inference latency</li>
-          <li>Automated GitHub Actions CI/CD reduced deployment cycle time by 80%</li>
-        </ul>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric-item"><b>150K+ Records</b><span>Trained &amp; Validated</span></div>
-        <div class="cs-metric-item"><b>0.68 &rarr; 0.80</b><span>F1-Score Improvement</span></div>
-        <div class="cs-metric-item"><b>80% Faster</b><span>CI/CD Deployment Cycle</span></div>
-      </div>
-    </div>
-    <div class="cs-tags"><span>Python</span><span>XGBoost</span><span>Scikit-learn</span><span>Docker</span><span>AWS</span><span>GitHub Actions</span><span>CI/CD</span></div>
-  </article>
 
-  <!-- 10. Cloud-Native Kubernetes GitOps -->
-  <article class="card cs-card" data-category="devops">
-    <div>
-      <div class="cs-top">
-        <span class="cs-badge devops">Cloud &bull; DevOps &bull; GitOps</span>
-        <a class="cs-github cs-source-li" href="https://www.linkedin.com/in/roshan-salunke-865425263/recent-activity/all/" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          View on LinkedIn &rarr;
-        </a>
-      </div>
-      <h3>Cloud-Native Kubernetes GitOps Deployment with Argo CD</h3>
-      <p class="cs-desc">Production-grade multi-service application containerization and declarative GitOps orchestration on Kubernetes with automated canary rollouts and full observability.</p>
-      <div class="cs-section">
-        <h4>Architecture &amp; Implementation</h4>
-        <p>Multi-tier microservices packaged as optimized multi-stage Docker containers and orchestrated on Kubernetes via Helm charts. Argo CD continuously reconciles Git repository changes directly into cluster state.</p>
-      </div>
-      <div class="cs-section">
-        <h4>Key Highlights</h4>
-        <ul>
-          <li>Zero-downtime rolling updates with Horizontal Pod Autoscaling (HPA)</li>
-          <li>Ingress routing with automated TLS certificate renewals via cert-manager</li>
-          <li>Prometheus metrics scraping paired with interactive Grafana service dashboards</li>
-        </ul>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric-item"><b>Zero-Downtime</b><span>Automated Rolling Deployments</span></div>
-        <div class="cs-metric-item"><b>Argo CD GitOps</b><span>Continuous Cluster Sync</span></div>
-        <div class="cs-metric-item"><b>Prometheus &bull; Grafana</b><span>Real-Time Health Alerts</span></div>
-      </div>
-    </div>
-    <div class="cs-tags"><span>Kubernetes</span><span>Docker</span><span>Helm</span><span>Argo CD</span><span>Prometheus</span><span>Grafana</span><span>NGINX Ingress</span></div>
-  </article>
-
-  <!-- 11. Terraform Multi-Cloud -->
-  <article class="card cs-card" data-category="devops">
-    <div>
-      <div class="cs-top">
-        <span class="cs-badge devops">Infrastructure as Code</span>
-        <a class="cs-github cs-source-li" href="https://www.linkedin.com/in/roshan-salunke-865425263/recent-activity/all/" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          View on LinkedIn &rarr;
-        </a>
-      </div>
-      <h3>Multi-Cloud Infrastructure as Code with Terraform</h3>
-      <p class="cs-desc">Codified, repeatable infrastructure provisioning across AWS and Azure using modular Terraform architectures, remote state locking, and automated cost estimation.</p>
-      <div class="cs-section">
-        <h4>Architecture &amp; Implementation</h4>
-        <p>Modular Terraform codebases provisioning VPCs, VNets, subnetting, security groups, managed databases, and IAM policies across AWS and Azure with centralized remote state locking in AWS S3 and DynamoDB.</p>
-      </div>
-      <div class="cs-section">
-        <h4>Key Highlights</h4>
-        <ul>
-          <li>Pre-apply automated cost forecasting via Infracost integrated into CI/CD</li>
-          <li>Strict least-privilege security policies and automated secret rotation</li>
-          <li>Repeatable disaster recovery environments created with single-command execution</li>
-        </ul>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric-item"><b>AWS &amp; Azure</b><span>Multi-Cloud Architecture</span></div>
-        <div class="cs-metric-item"><b>S3 + DynamoDB</b><span>State Locking &amp; Encryption</span></div>
-        <div class="cs-metric-item"><b>Infracost</b><span>Automated Cloud Budget Guard</span></div>
-      </div>
-    </div>
-    <div class="cs-tags"><span>Terraform</span><span>AWS (VPC, EC2, IAM)</span><span>Azure (VNet, VMs)</span><span>Infracost</span><span>CI/CD</span><span>Security</span></div>
-  </article>
 
   <!-- 12. Production LLM Gateway & Token Streaming Proxy -->
   <article class="card cs-card" data-category="rag">
@@ -469,44 +370,12 @@
     <div class="cs-tags"><span>FastAPI</span><span>Async Azure OpenAI</span><span>SSE Streaming</span><span>LRU Cache</span><span>Docker</span><span>Railway</span></div>
   </article>
 
-  <!-- 13. High-Scale Click Fraud Detection on AWS & Azure -->
-  <article class="card cs-card" data-category="devops">
-    <div>
-      <div class="cs-top">
-        <span class="cs-badge devops">Cloud &bull; Fraud Detection</span>
-        <a class="cs-github" href="https://github.com/roshan9900/AdTracking-Fraud-Detection-AWS-Azure-" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-          View on GitHub &rarr;
-        </a>
-      </div>
-      <h3>High-Scale Click Fraud Detection on AWS &amp; Azure</h3>
-      <p class="cs-desc">Distributed machine learning pipeline processing massive imbalanced mobile clickstream data to identify fraudulent click farms and bot clicks in real time across AWS EC2 and Azure virtual instances.</p>
-      <div class="cs-section">
-        <h4>Architecture &amp; Implementation</h4>
-        <p>Engineered for extreme class imbalance (&lt;0.2% positive fraud rate) across tens of millions of mobile ad clicks. Implements custom temporal feature engineering (rolling click frequency per IP-device-channel window, delta to next click), downsampling, and gradient-boosted decision trees trained and validated on cloud compute clusters.</p>
-      </div>
-      <div class="cs-section">
-        <h4>Key Highlights</h4>
-        <ul>
-          <li>Handled high-cardinality IP, app, device, and OS attributes using categorical frequency encoding</li>
-          <li>Optimized ROC-AUC and PR-AUC to protect advertising budgets from bot network depletion</li>
-          <li>Benchmarked and executed across AWS and Azure cloud compute environments with automated logging</li>
-        </ul>
-      </div>
-      <div class="cs-metrics">
-        <div class="cs-metric-item"><b>99.8%</b><span>ROC-AUC Metric</span></div>
-        <div class="cs-metric-item"><b>&lt;0.2%</b><span>Severe Class Imbalance Handled</span></div>
-        <div class="cs-metric-item"><b>AWS &bull; Azure</b><span>Cloud Distributed Pipeline</span></div>
-      </div>
-    </div>
-    <div class="cs-tags"><span>LightGBM</span><span>Python</span><span>AWS EC2</span><span>Azure VMs</span><span>Feature Engineering</span><span>CloudWatch</span></div>
-  </article>
 
   <!-- 14. ML Pipeline & Data Versioning with DVC -->
   <article class="card cs-card" data-category="mlops">
     <div>
       <div class="cs-top">
-        <span class="cs-badge devops">MLOps &bull; DVC</span>
+        <span class="cs-badge">MLOps &bull; DVC</span>
         <a class="cs-github" href="https://github.com/roshan9900/mlops_dvc" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
           View on GitHub &rarr;

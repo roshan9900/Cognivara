@@ -11,12 +11,14 @@ h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
 h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:12px}
 .lead{color:var(--mut);max-width:60ch;margin-bottom:38px}
 .grad{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:26px;height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.15rem}
+header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{max-width:1240px}
+nav{display:flex;align-items:center;gap:clamp(14px,1.8vw,28px);height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.15rem;flex:none}
 .brand-mark{
-    width:180px;
-    height:auto;
+    width:auto;
+    height:36px;
+    max-width:155px;
     object-fit:contain;
     flex:none;
 }
@@ -34,13 +36,17 @@ nav{display:flex;align-items:center;gap:26px;height:68px}
     display:none;
 }
 .brand small{display:block;font-size:.55rem;letter-spacing:.16em;color:var(--mut);font-weight:400;margin-top:-4px}
-.links{display:flex;gap:22px;margin-left:auto;font-size:.93rem;color:var(--mut)}
+.links{display:flex;align-items:center;gap:clamp(12px,1.5vw,22px);margin-left:auto;font-size:.9rem;color:var(--mut)}
+.links a{white-space:nowrap;transition:color .15s;font-weight:500}
 .links a:hover{color:var(--tx)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font:inherit;font-weight:500;border:1px solid var(--acc);cursor:pointer;transition:transform .15s,background .2s}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font:inherit;font-weight:500;border:1px solid var(--acc);cursor:pointer;transition:transform .15s,background .2s;white-space:nowrap}
 .btn:active{transform:scale(.97)}
 .pri{background:var(--acc);color:#fff}.pri:hover{filter:brightness(1.1)}
 .sec{background:transparent;color:var(--tx)}.sec:hover{background:var(--glow)}
-.icon{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font-size:1.1rem}
+nav .dd{flex:none}
+nav .dd-btn{padding:8px 16px;height:38px;font-size:.85rem;border-radius:8px;white-space:nowrap;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+nav .icon{width:38px;height:38px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--tx);cursor:pointer;font-size:1rem;display:inline-flex;align-items:center;justify-content:center;flex:none;transition:border-color .15s,background .15s}
+nav .icon:hover{border-color:var(--acc);background:var(--glow)}
 .menu{display:none}
 .hero{padding:88px 0 70px;background:radial-gradient(900px 500px at 85% 20%,var(--glow),transparent 70%)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
@@ -89,11 +95,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 26px;color:var(--mut);fon
 .fbottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 @media(max-width:700px){.fgrid{grid-template-columns:1fr 1fr}}
 .wa{position:fixed;right:18px;bottom:18px;background:#22c55e;color:#fff;padding:12px 18px;border-radius:99px;font-weight:500;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:15}
-@media(max-width:860px){
+@media(max-width:960px){
 .hero .wrap,.contact,.g2,.g3,.steps,.row{grid-template-columns:1fr}
-.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);padding:18px 22px;border-bottom:1px solid var(--line)}
+.links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--bg);padding:18px 22px;border-bottom:1px solid var(--line);gap:14px}
 .links.open{display:flex}.menu{display:block;margin-left:auto}.links{margin-left:0}
-nav>.btn{display:none}section{padding:60px 0}}
+nav>.btn,nav .dd{display:none}section{padding:60px 0}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 .dd{position:relative;display:inline-block}
 .dd-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:240px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;display:none;box-shadow:0 12px 30px rgba(0,0,0,.28);z-index:30}
@@ -312,5 +318,21 @@ nav>.btn{display:none}section{padding:60px 0}}
 .consult-strip b{display:block;font-size:.95rem;color:var(--tx);margin-bottom:4px}
 .consult-strip p{font-size:.86rem;color:var(--mut);line-height:1.5;margin-bottom:12px}
 :root[data-theme=light] .consult-strip{background:rgba(32,80,230,.06);border-color:rgba(32,80,230,.2)}
+
+/* Pricing Anchor Badge & Seat Reservation Banner */
+.prog-badges-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.prog-badges-row .prog-badge{margin-bottom:0}
+.price-anchor-badge{display:inline-block;font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:20px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.32);color:#22c55e;letter-spacing:.03em}
+.price-anchor-badge del{color:var(--mut);margin-right:2px;font-weight:400}
+.price-anchor-badge b{color:#4ade80;font-weight:700}
+:root[data-theme=light] .price-anchor-badge{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.3);color:#15803d}
+:root[data-theme=light] .price-anchor-badge b{color:#166534}
+
+.reserve-seat-banner{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.28);border-radius:10px;padding:10px 14px;margin:10px 0 14px}
+.reserve-badge{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#60a5fa;background:rgba(59,130,246,.14);border:1px solid rgba(59,130,246,.28);padding:2px 8px;border-radius:6px;margin-bottom:6px}
+.reserve-seat-banner p{font-size:.86rem;color:var(--tx);line-height:1.45;margin:0}
+:root[data-theme=light] .reserve-seat-banner{background:rgba(37,99,235,.06);border-color:rgba(37,99,235,.22)}
+:root[data-theme=light] .reserve-badge{color:#1d4ed8;background:rgba(37,99,235,.08);border-color:rgba(37,99,235,.2)}
+
 
 
